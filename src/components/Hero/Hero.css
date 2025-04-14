@@ -1,0 +1,18 @@
+.hero{
+    height: 50  vh;
+    position: relative;
+    background: linear-gradient(180deg,beige,#e1ffea22 60%);
+    display: flex;
+    overflow: hidden; /* prevents overflow from tall images */
+}
+/* Center the dots */
+.hero .slick-dots {
+    bottom: 10px; /* Adjust vertical position */
+    text-align: center;
+    width: 100%;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  
