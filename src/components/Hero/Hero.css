@@ -1,18 +1,43 @@
-.hero{
-    height: 50  vh;
+.hero {
     position: relative;
-    background: linear-gradient(180deg,beige,#e1ffea22 60%);
-    display: flex;
-    overflow: hidden; /* prevents overflow from tall images */
-}
-/* Center the dots */
-.hero .slick-dots {
-    bottom: 10px; /* Adjust vertical position */
-    text-align: center;
+    height: 100vh; /* Covers 50% of screen height */
     width: 100%;
-    display: flex ;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(180deg, beige, #e1ffea22 60%);
+  }
+  
+  .carousel-slide {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .carousel-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .dots {
     position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 1;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dot.active {
+    background: #333;
   }
   

@@ -1,6 +1,7 @@
 import React from 'react'
 import './NavBar.css'
 import shopping_cart from '../Assets/shopping_cart.jpg'
+import varaLogo from '../Assets/images/light_mode_logo.png'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 const NavBar = () => {
@@ -8,7 +9,7 @@ const NavBar = () => {
     return(
         <div className = 'navbar'>
             <div>
-                <img src = {shopping_cart} alt = "" className='cart-icon' /> {/*similarly put a classname,img,css for the vara logo */}
+                <img src = {varaLogo} alt = "" className='vara-icon' /> {/*similarly put a classname,img,css for the vara logo */}
             </div>
             <ul className = 'nav-menu'>
             <li onClick={()=>{setMenu("Toys")}}><Link style={{textDecoration : 'none'}} to = '/toys'>Toys</Link>{menu==='Toys'?<hr></hr>:<></>}</li>

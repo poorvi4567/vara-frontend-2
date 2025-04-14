@@ -12,6 +12,12 @@
   object-fit: contain;
   }
 
+.vara-icon{
+width: 100px;
+  height: 100px;
+  cursor: pointer;
+  object-fit: contain;
+}
 .nav-menu{
     display: flex;
     align-items: center;

@@ -1,40 +1,37 @@
-import React from 'react'
-import './Hero.css'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState, useEffect } from 'react';
+import './Hero.css';
 import TrainEngine from '../Assets/images/TrainEngine.jpeg';
-import CatCounting from  "../Assets/images/Cat Counting.jpeg";
-import Bangles from "../Assets/images/Bangles.jpeg";
+import CatCounting from '../Assets/images/Cat Counting.jpeg';
+import Bangles from '../Assets/images/Bangles.jpeg';
+
+const images = [TrainEngine, CatCounting, Bangles];
+
 const Hero = () => {
-    const images = [
-        TrainEngine,
-        CatCounting,
-        Bangles
-      ];
-      const settings = {
-        dots: true,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 5000, // 10 seconds
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-      };
+  const [current, setCurrent] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000); // Change slide every 5s
+    return () => clearInterval(interval);
+  }, []);
 
-    return (
-        <div className = 'hero'>
-            <Slider {...settings}>
-      {images.map((src, i) => (
-        <div key={i}>
-          <img src={src} alt={`slide-${i}`} style={{ width: "100%", height: "100%",objectFit: "cover" }} />
-        </div>
-      ))}
-    </Slider>
+  return (
+    <div className="hero">
+      <div className="carousel-slide">
+        <img src={images[current]} alt={`slide-${current}`} />
+      </div>
+      <div className="dots">
+        {images.map((_, i) => (
+          <span
+            key={i}
+            className={`dot ${i === current ? 'active' : ''}`}
+            onClick={() => setCurrent(i)}
+          />
+        ))}
+      </div>
     </div>
-        
-    )
-}
+  );
+};
 
 export default Hero;
