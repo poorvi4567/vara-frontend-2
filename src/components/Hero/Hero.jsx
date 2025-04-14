@@ -18,8 +18,11 @@ const Hero = () => {
 
   return (
     <div className="hero">
-      <div className="carousel-slide">
-        <img src={images[current]} alt={`slide-${current}`} />
+      <div className="carousel-track"
+       style={{transform: `translateX(-${current*100}%)`}}
+      >
+        {images.map((img,i)=>(
+          <img key = {i} src = {img} alt = {`slide-${i}`}/>))}
       </div>
       <div className="dots">
         {images.map((_, i) => (
