@@ -7,6 +7,9 @@ import Shop from './pages/Shop';
 import ShopCategory from './pages/ShopCategory';
 import Products from './pages/Products';
 import Cart from './pages/Cart';
+//import About from './pages/About'; 
+import About from './components/Aboutc/Aboutp.jsx';
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,7 @@ function App() {
         <Route path =  '/accessories' element={<ShopCategory category="accessories"/>}/>
         <Route path =  '/gifts' element={<ShopCategory category = "gifts"/>}/>
         <Route path =  '/decor' element={<ShopCategory category = "decor"/>}/>
+        <Route path =  '/about' element={<About/>}/>
         <Route path =  '/products' element={<Products/>}>
         <Route path =  ':productId' element={<Products/>}/>
         </Route>

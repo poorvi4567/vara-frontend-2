@@ -9,13 +9,14 @@ const NavBar = () => {
     return(
         <div className = 'navbar'>
             <div>
-                <img src = {varaLogo} alt = "" className='vara-icon' /> {/*similarly put a classname,img,css for the vara logo */}
+            <Link to = '/'><img src = {varaLogo} alt = "" className='vara-icon' /></Link>    {/*similarly put a classname,img,css for the vara logo */}
             </div>
             <ul className = 'nav-menu'>
             <li onClick={()=>{setMenu("Toys")}}><Link style={{textDecoration : 'none'}} to = '/toys'>Toys</Link>{menu==='Toys'?<hr></hr>:<></>}</li>
             <li onClick={()=>{setMenu("Accessories")}}><Link to = '/accessories'>Accessories</Link>{menu==='Accessories'?<hr></hr>:<></>}</li>
             <li onClick={()=>{setMenu("Gifts")}}><Link to = '/gifts'>Gifts</Link>{menu==='Gifts'?<hr></hr>:<></>}</li>
             <li onClick={()=>{setMenu("Decor")}}><Link to = '/decor'>Decor</Link>{menu==='Decor'?<hr></hr>:<></>}</li>
+            <li onClick={()=>{setMenu("About")}}><Link to = '/about'>About</Link>{menu==='About'?<hr></hr>:<></>}</li>
         </ul>
             <div className='nav-right'>
                 <button className='login-btn'>Login</button>
