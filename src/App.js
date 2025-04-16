@@ -9,7 +9,7 @@ import Products from './pages/Products';
 import Cart from './pages/Cart';
 //import About from './pages/About'; 
 import About from './components/Aboutc/Aboutp.jsx';
-
+import ShopNow from './pages/ShopNow.jsx';
 function App() {
   return (
     <div className="App">
@@ -25,6 +25,7 @@ function App() {
         <Route path =  '/products' element={<Products/>}>
         <Route path =  ':productId' element={<Products/>}/>
         </Route>
+        <Route path = '/shopnow' element={<ShopNow/>}/>
         <Route path =  '/cart' element={<Cart/>}/>
 
       </Routes>

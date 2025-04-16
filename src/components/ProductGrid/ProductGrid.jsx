@@ -2,7 +2,7 @@ import React from "react";
 import './ProductGrid.css'; // Add CSS for styling
 
 import Bangles from '../Assets/images/Bangles.jpeg';
-import BigBunny from '../Assets/images/Big bunny.jpeg';
+import BigBunny from '../Assets/images/bigBunny.jpeg';
 import CatCounting from '../Assets/images/Cat Counting.jpeg';
 import GiantWheel from '../Assets/images/Gaint Wheel.jpeg';
 
